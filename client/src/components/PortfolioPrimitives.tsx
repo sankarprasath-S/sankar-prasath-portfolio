@@ -79,6 +79,7 @@ export function SkillItem({ name, detail }: { name: string; detail: string }) {
 export type PortfolioProject = {
   title: string;
   category: string;
+  image: string;
   description: string;
   technologies: string;
   problem: string;
@@ -99,8 +100,9 @@ export function ProjectCard({
   return (
     <article className={`project-card project-card--${layout}`}>
       <div className="project-card__image" aria-label={`Editorial project marker for ${project.title}`}>
-        <span>VERIFIED GITHUB PROJECT</span>
+        <img src={project.image} alt={`Conceptual visual treatment for ${project.title}`} />
         <div className="project-card__image-grid" aria-hidden="true" />
+        <span>VERIFIED GITHUB PROJECT</span>
       </div>
       <div className="project-card__topline">
         <span>PROJECT {number}</span>

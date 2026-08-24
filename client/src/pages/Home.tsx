@@ -48,6 +48,7 @@ const roleWords = [
 const githubProjects: Array<{
   title: string;
   category: string;
+  image: string;
   filters: string[];
   description: string;
   technologies: string;
@@ -59,6 +60,7 @@ const githubProjects: Array<{
   {
     title: "CircuitSight AI",
     category: "AI / Engineering",
+    image: `${ASSET_ORIGIN}/manus-storage/circuitsight-ai-project-visual_052383b5.jpg`,
     filters: ["AI", "Engineering"],
     description: "A team-built visual electronics debugging and learning platform that turns a circuit photograph, schematic, or question into a grounded diagnostic conversation.",
     technologies: "React · TypeScript · Vite · AI-assisted visual analysis",
@@ -70,6 +72,7 @@ const githubProjects: Array<{
   {
     title: "AeroCompliance",
     category: "Web / Engineering",
+    image: `${ASSET_ORIGIN}/manus-storage/aerocompliance-project-visual_9e688011.jpg`,
     filters: ["Web", "Engineering"],
     description: "A high-precision aviation maintenance compliance and technical-documentation terminal for aircraft personnel.",
     technologies: "React · TypeScript · Express · MongoDB · Tailwind CSS",

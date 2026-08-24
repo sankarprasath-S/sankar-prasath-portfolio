@@ -1,5 +1,13 @@
 # Portfolio update checklist
 
+- [x] Generate or source distinct visual treatments for CircuitSight AI and AeroCompliance.
+- [x] Replace the project-card grid placeholders with the prepared visuals.
+- [ ] Verify and publish the project imagery update.
+
+> Verification note: CircuitSight AI and AeroCompliance now reference separate generated visual assets; the live preview remains functional after the card update.
+- [x] Identify why the live GitHub Pages homepage still reaches the fallback route.
+- [x] Deploy a route fix that works from the public GitHub Pages URL.
+- [x] Verify the corrected homepage in a fresh public browser session.
 - [x] Add the GitHub Pages build-and-deploy workflow for the portfolio.
 - [x] Make the repository public and enable GitHub Pages deployment.
 - [x] Confirm the published GitHub Pages URL.
