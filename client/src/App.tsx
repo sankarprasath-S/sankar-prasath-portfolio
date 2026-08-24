@@ -1,15 +1,18 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Router as WouterRouter, Switch } from "wouter";
+import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 
+const homePath = import.meta.env.BASE_URL;
+
 function Routes() {
   return (
     <Switch>
+      <Route path={homePath} component={Home} />
       <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
@@ -24,8 +27,6 @@ function Routes() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
-  const basePath = import.meta.env.BASE_URL === "/" ? undefined : import.meta.env.BASE_URL.replace(/\/$/, "");
-
   return (
     <ErrorBoundary>
       <ThemeProvider
@@ -34,9 +35,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <WouterRouter base={basePath}>
-            <Routes />
-          </WouterRouter>
+          <Routes />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
