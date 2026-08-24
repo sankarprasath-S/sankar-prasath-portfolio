@@ -1,8 +1,8 @@
 # Portfolio update checklist
 
 - [x] Prepare the current portfolio source for GitHub publishing.
-- [ ] Create or connect a private GitHub repository and push the source.
-- [ ] Confirm the pushed repository is accessible.
+- [x] Create or connect a private GitHub repository and push the source.
+- [x] Confirm the pushed repository is accessible.
 - [x] Review GitHub repositories and identify non-portfolio projects with sufficient documentation.
 - [x] Replace project placeholders with verified GitHub project content and links.
 - [x] Verify and publish the updated project showcase.
