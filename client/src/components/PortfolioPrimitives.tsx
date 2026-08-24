@@ -5,6 +5,8 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import type { ChangeEvent } from "react";
 
+const ASSET_ORIGIN = "https://sankarfolio-rydjgeka.manus.space";
+
 export type ButtonTone = "primary" | "outline" | "gold";
 
 export function PortfolioButton({
@@ -181,7 +183,7 @@ export function Footer({ scrollTo }: { scrollTo: (id: string) => void }) {
     <footer className="portfolio-footer">
       <div className="portfolio-footer__top">
         <div>
-          <img src="/manus-storage/sankar-brand-mark_7cc26809.png" alt="Abstract Sankar Prasath S brand mark" />
+          <img src={`${ASSET_ORIGIN}/manus-storage/sankar-brand-mark_7cc26809.png`} alt="Abstract Sankar Prasath S brand mark" />
           <p className="portfolio-footer__name">Sankar Prasath S</p>
           <p className="portfolio-footer__role">EEE Student / Developer / AI Enthusiast</p>
         </div>

@@ -8,13 +8,14 @@ import { useEffect, useMemo, useState, type ChangeEvent, type FormEvent } from "
 import { PortfolioNavigation } from "@/components/PortfolioNavigation";
 import { ContactInput, Footer, PortfolioButton, ProjectCard, SectionHeader, SkillItem, TimelineItem } from "@/components/PortfolioPrimitives";
 
-const HERO_SUPPORTING_IMAGE = "/manus-storage/editorial-circuit-still-life_ae079309.jpg";
-const TECHNOLOGY_IMAGE = "/manus-storage/abstract-engineering-landscape_8178155f.jpg";
-const FEATURED_PROJECT_IMAGE = "/manus-storage/project-forms_651a2a10.jpg";
+const ASSET_ORIGIN = "https://sankarfolio-rydjgeka.manus.space";
+const HERO_SUPPORTING_IMAGE = `${ASSET_ORIGIN}/manus-storage/editorial-circuit-still-life_ae079309.jpg`;
+const TECHNOLOGY_IMAGE = `${ASSET_ORIGIN}/manus-storage/abstract-engineering-landscape_8178155f.jpg`;
+const FEATURED_PROJECT_IMAGE = `${ASSET_ORIGIN}/manus-storage/project-forms_651a2a10.jpg`;
 
 // Replace this only with Sankar's real profile image after it is uploaded to project storage.
 // No generated substitute is used for the portrait treatment.
-const PROFILE_IMAGE_URL = "/manus-storage/sankar-prasath-profile_c212d6a4.jpeg";
+const PROFILE_IMAGE_URL = `${ASSET_ORIGIN}/manus-storage/sankar-prasath-profile_c212d6a4.jpeg`;
 
 // Add a real hosted resume path here when it is available. Keep null until then.
 const RESUME_URL: string | null = null;

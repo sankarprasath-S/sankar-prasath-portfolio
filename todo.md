@@ -1,5 +1,8 @@
 # Portfolio update checklist
 
+- [x] Add the GitHub Pages build-and-deploy workflow for the portfolio.
+- [ ] Make the repository public and enable GitHub Pages deployment.
+- [ ] Confirm the published GitHub Pages URL.
 - [x] Prepare the current portfolio source for GitHub publishing.
 - [x] Create or connect a private GitHub repository and push the source.
 - [x] Confirm the pushed repository is accessible.

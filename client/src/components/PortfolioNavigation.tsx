@@ -4,6 +4,8 @@
  */
 import { Menu, Moon, Sun, X } from "lucide-react";
 
+const ASSET_ORIGIN = "https://sankarfolio-rydjgeka.manus.space";
+
 const links = [
   ["Home", "home"],
   ["About", "about"],
@@ -32,7 +34,7 @@ export function PortfolioNavigation({
   return (
     <header className="portfolio-nav">
       <button className="brand-lockup" onClick={() => onNavigate("home")} aria-label="Back to portfolio home">
-        <img src="/manus-storage/sankar-brand-mark_7cc26809.png" alt="" />
+        <img src={`${ASSET_ORIGIN}/manus-storage/sankar-brand-mark_7cc26809.png`} alt="" />
         <span><strong>Sankar Prasath S</strong><small>Personal folio / 2026</small></span>
       </button>
       <nav className="portfolio-nav__links" aria-label="Primary navigation">
