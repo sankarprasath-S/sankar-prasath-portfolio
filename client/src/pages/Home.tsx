@@ -14,7 +14,7 @@ const FEATURED_PROJECT_IMAGE = "/manus-storage/project-forms_651a2a10.jpg";
 
 // Replace this only with Sankar's real profile image after it is uploaded to project storage.
 // No generated substitute is used for the portrait treatment.
-const PROFILE_IMAGE_URL = "";
+const PROFILE_IMAGE_URL = "/manus-storage/sankar-prasath-profile_c212d6a4.jpeg";
 
 // Add a real hosted resume path here when it is available. Keep null until then.
 const RESUME_URL: string | null = null;
