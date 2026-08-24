@@ -75,3 +75,6 @@ The wordmark is set in tracked Inter uppercase, separated by a fine signal rule.
 - The recurring technical signature is a system of connected gold nodes, slim trace rules, section folio labels, and the compact SP circuit mark.
 - Visual assets should remain tied to Sankar’s engineering journey: original portraits, notebooks, circuits, workbenches, sketches, project artifacts, and in-progress making moments are preferred as they become available.
 - Headline treatment intentionally varies between direct statements, line-broken titles, and selective emphasis so the page keeps an authored editorial rhythm.
+- Every major section carries a technical-folio cue beyond typography, such as a field-note label, trace rule, connected node, archival caption, or the SP circuit mark.
+- Gold italic emphasis remains concentrated in hero-scale moments; later sections rely more on numerals, trace rules, artifact captions, and asymmetric columns for hierarchy.
+- LinkedIn content is framed as a dated engineering field note with project-artifact evidence rather than a simulated social-media feed.

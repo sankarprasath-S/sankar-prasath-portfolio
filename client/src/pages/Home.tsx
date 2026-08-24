@@ -276,8 +276,40 @@ export default function Home() {
           </Reveal>
         </section>
 
+        <section className="section linkedin-content" id="linkedin">
+          <Reveal><SectionHeader index="04" label="LinkedIn content" title={<>Learning<br /><em>in public.</em></>} /></Reveal>
+          <div className="linkedin-content__signal" aria-hidden="true"><span>FIELD NOTE / 2026</span><i /><b /><b /></div>
+          <div className="linkedin-content__grid">
+            <Reveal className="linkedin-post">
+              <div className="linkedin-post__meta"><span className="linkedin-post__mark"><Linkedin size={17} /> LinkedIn post</span><span>Portfolio launch</span></div>
+              <h3>Sharing the<br />work in progress.</h3>
+              <div className="linkedin-post__artifact"><img src={`${ASSET_ORIGIN}/manus-storage/circuitsight-ai-project-visual_052383b5.jpg`} alt="Circuit-led visual treatment representing an engineering workbench" /><span>01 / CIRCUIT STUDY</span></div>
+              <div className="linkedin-post__copy">
+                <p>I’m happy to share my personal portfolio website. It is a place to document what I am learning, the projects I am contributing to, and the direction I want to keep building toward.</p>
+                <p>As an Electrical and Electronics Engineering student, I’m exploring the intersection of engineering, software development, artificial intelligence, and practical problem solving.</p>
+              </div>
+              <a className="linkedin-post__link" href="https://www.linkedin.com/in/sankarprasath/" target="_blank" rel="noreferrer"><Linkedin size={15} /> Connect on LinkedIn <ArrowUpRight size={15} /></a>
+              <p className="linkedin-post__tags">#ElectricalEngineering #SoftwareDevelopment #StudentDeveloper</p>
+            </Reveal>
+            <Reveal className="linkedin-article">
+              <p className="eyebrow"><span>Long-form article</span> / Building ideas into reality</p>
+              <h3>My learning journey in<br />engineering, software, and AI.</h3>
+              <p>I created this portfolio as a working record rather than a finished story. It connects the systems thinking I am learning in Electrical and Electronics Engineering with my growing interest in software development, AI, and practical problem solving.</p>
+              <p>Projects such as CircuitSight AI and AeroCompliance are helping me learn through application, collaboration, and more honest technical questions.</p>
+              <details className="linkedin-article__details">
+                <summary>Read the article <ArrowUpRight size={15} /></summary>
+                <div>
+                  <p>CircuitSight AI explores how a circuit photograph, schematic, or technical question can become the starting point for a grounded diagnostic conversation. My contribution was the idea and concept behind the project.</p>
+                  <p>AeroCompliance explores how software can help organize aviation-maintenance compliance, documentation, and role-specific work in one focused system. Both projects reinforce why traceability, clarity, and evidence matter.</p>
+                  <p>My next focus is to strengthen programming foundations, gain more hands-on web-application experience, and contribute to technical communities and collaborative projects.</p>
+                </div>
+              </details>
+            </Reveal>
+          </div>
+        </section>
+
         <section className="section recognition" id="recognition">
-          <Reveal><SectionHeader index="04" label="Recognition" title={<>Learning.<br />Participating.<br />Growing.</>} align="right" /></Reveal>
+          <Reveal><SectionHeader index="05" label="Recognition" title={<>Learning.<br />Participating.<br />Growing.</>} align="right" /></Reveal>
           <Reveal className="timeline">
             <TimelineItem year="2026" title="IBM Enterprise Design Thinking Practitioner Course" organization="IBM" active>Confirmed certification. A foundation in user-centred problem framing and collaborative design thinking.</TimelineItem>
             <TimelineItem year="Future" title="Hackathons & Technical Workshops" organization="Editable entry">Add future hackathons, workshops, bootcamps, courses, competitions, or certificates here. Include a verified link when one is available.</TimelineItem>
@@ -285,7 +317,7 @@ export default function Home() {
         </section>
 
         <section className="section journey" id="journey">
-          <Reveal><SectionHeader index="05" label="Journey" title={<>More than<br />just a classroom.</>} /></Reveal>
+          <Reveal><SectionHeader index="06" label="Journey" title={<>More than<br />just a classroom.</>} /></Reveal>
           <Reveal className="journey__grid">
             <div className="journey__statement"><span>In progress / 2025 — 2029</span><p>Learning reaches further through participation, collaboration, and a willingness to contribute.</p></div>
             <div className="timeline timeline--compact">
@@ -296,7 +328,7 @@ export default function Home() {
         </section>
 
         <section className="section education" id="education">
-          <Reveal><SectionHeader index="06" label="Education" title={<>Where the<br />journey began.</>} /></Reveal>
+          <Reveal><SectionHeader index="07" label="Education" title={<>Where the<br />journey began.</>} /></Reveal>
           <Reveal className="education__record">
             <div className="education__year">2025<br /><span>2029</span></div>
             <div className="education__line" aria-hidden="true"><span /></div>
@@ -316,7 +348,7 @@ export default function Home() {
           <img src={TECHNOLOGY_IMAGE} alt="Abstract architectural interpretation of connected engineering systems" />
           <div className="technology-wall__shade" />
           <div className="technology-wall__content">
-            <Reveal><SectionHeader index="07" label="Technology" title={<>Tools of<br />the <em>craft.</em></>} /></Reveal>
+            <Reveal><SectionHeader index="08" label="Technology" title={<>Tools of<br />the <em>craft.</em></>} /></Reveal>
             <div className="technology-wall__blocks">
               {techBlocks.map(([title, tools], index) => <Reveal key={title}><article tabIndex={0}><span>0{index + 1}</span><h3>{title}</h3><p>{tools}</p></article></Reveal>)}
             </div>
@@ -328,7 +360,7 @@ export default function Home() {
         </section>
 
         <section className="section contact" id="contact">
-          <Reveal><SectionHeader index="08" label="Contact" title={<>Let&apos;s build<br />something <em>meaningful.</em></>} /></Reveal>
+          <Reveal><SectionHeader index="09" label="Contact" title={<>Let&apos;s build<br />something <em>meaningful.</em></>} /></Reveal>
           <div className="contact__grid">
             <Reveal className="contact__details">
               <p>For internship opportunities, project conversations, technical communities, or a meaningful new challenge, these are the best ways to connect.</p>

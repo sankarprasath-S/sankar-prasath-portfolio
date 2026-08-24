@@ -1,5 +1,11 @@
 # Portfolio update checklist
 
+- [x] Design the LinkedIn post and article section within the existing Printed Circuit system.
+- [x] Add the LinkedIn launch post and article highlights to the portfolio.
+- [x] Verify and publish the LinkedIn content section.
+- [x] Define the LinkedIn launch angle using the portfolio, project, and learning journey details.
+- [x] Draft a concise LinkedIn post and a longer article.
+- [x] Deliver the copy for review before publishing.
 - [x] Generate or source distinct visual treatments for CircuitSight AI and AeroCompliance.
 - [x] Replace the project-card grid placeholders with the prepared visuals.
 - [x] Verify and publish the project imagery update.

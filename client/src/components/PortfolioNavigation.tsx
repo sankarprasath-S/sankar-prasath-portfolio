@@ -11,6 +11,7 @@ const links = [
   ["About", "about"],
   ["Skills", "skills"],
   ["Projects", "projects"],
+  ["LinkedIn", "linkedin"],
   ["Journey", "journey"],
   ["Education", "education"],
   ["Contact", "contact"],
