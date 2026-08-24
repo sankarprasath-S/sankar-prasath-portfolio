@@ -3,7 +3,7 @@
  * paper, precise charcoal rules, and sparse Signal Gold highlights.
  */
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Check, ExternalLink, Github, Linkedin, Mail, Quote } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, Github, Linkedin, Mail, Quote } from "lucide-react";
 import { useEffect, useMemo, useState, type ChangeEvent, type FormEvent } from "react";
 import { PortfolioNavigation } from "@/components/PortfolioNavigation";
 import { ContactInput, Footer, PortfolioButton, ProjectCard, SectionHeader, SkillItem, TimelineItem } from "@/components/PortfolioPrimitives";
@@ -44,6 +44,40 @@ const roleWords = [
   "Technology Learner",
 ];
 
+const githubProjects: Array<{
+  title: string;
+  category: string;
+  filters: string[];
+  description: string;
+  technologies: string;
+  problem: string;
+  approach: string;
+  github: string;
+  demo?: string;
+}> = [
+  {
+    title: "CircuitSight AI",
+    category: "AI / Engineering",
+    filters: ["AI", "Engineering"],
+    description: "A team-built visual electronics debugging and learning platform that turns a circuit photograph, schematic, or question into a grounded diagnostic conversation.",
+    technologies: "React · TypeScript · Vite · AI-assisted visual analysis",
+    problem: "Make circuit-debugging guidance useful while keeping evidence and uncertainty clearly separated.",
+    approach: "Uses visual circuit analysis, context-aware follow-up guidance, and explicit recommended checks. Sankar’s contribution: Idea & Concept.",
+    github: "https://github.com/sankarprasath-S/CircuitSight-AI",
+    demo: "https://circuitai-ezw8hzmd.manus.space",
+  },
+  {
+    title: "AeroCompliance",
+    category: "Web / Engineering",
+    filters: ["Web", "Engineering"],
+    description: "A high-precision aviation maintenance compliance and technical-documentation terminal for aircraft personnel.",
+    technologies: "React · TypeScript · Express · MongoDB · Tailwind CSS",
+    problem: "Organise fleet assets, role-specific operational tasks, compliance work, and documentation in one focused system.",
+    approach: "Provides authenticated role dashboards, fleet asset management, compliance workflows, audit logs, notifications, and technical documentation routes.",
+    github: "https://github.com/sankarprasath-S/Aero-Compliance",
+  },
+];
+
 const revealTransition = { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] };
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -71,8 +105,8 @@ export default function Home() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const visibleProjects = useMemo(() => {
-    if (projectFilter === "All") return ["AI", "Web", "IoT", "Automation"];
-    return [projectFilter];
+    if (projectFilter === "All") return githubProjects;
+    return githubProjects.filter((project) => project.filters.includes(projectFilter));
   }, [projectFilter]);
 
   useEffect(() => {
@@ -215,25 +249,25 @@ export default function Home() {
         <section className="section projects" id="projects">
           <Reveal><SectionHeader index="03" label="Selected work" title={<>Ideas<br />into <em>projects.</em></>} /></Reveal>
           <Reveal className="project-filter" aria-label="Project category filters">
-            {["All", "AI", "Web", "IoT", "Engineering", "Hackathon", "Automation"].map((filter) => (
+            {["All", "AI", "Web", "Engineering"].map((filter) => (
               <button key={filter} onClick={() => setProjectFilter(filter)} className={projectFilter === filter ? "is-active" : ""}>{filter}</button>
             ))}
           </Reveal>
           <div className="projects__grid">
-            {visibleProjects.map((category, index) => <ProjectCard key={`${category}-${index}`} number={`0${index + 1}`} category={category} layout={(["large", "small", "wide", "offset"] as const)[index % 4]} />)}
+            {visibleProjects.map((project, index) => <ProjectCard key={project.title} number={`0${index + 1}`} project={project} layout={(["large", "small", "wide", "offset"] as const)[index % 4]} />)}
           </div>
           <Reveal className="featured-project">
             <div className="featured-project__image"><img src={FEATURED_PROJECT_IMAGE} alt="Abstract physical forms representing future engineering project areas" /></div>
             <div className="featured-project__content">
-              <p className="eyebrow"><span>Featured /</span> Editable project template</p>
-              <h3>One idea.<br /><em>Fully examined.</em></h3>
+              <p className="eyebrow"><span>Featured /</span> Team project</p>
+              <h3>CircuitSight AI.<br /><em>Evidence, not guesswork.</em></h3>
               <div className="featured-project__columns">
-                <div><span>The problem</span><p>Problem statement goes here.</p></div>
-                <div><span>The idea</span><p>Solution concept goes here.</p></div>
-                <div><span>The technology</span><p>Technology stack goes here.</p></div>
-                <div><span>The result</span><p>Impact or result goes here.</p></div>
+                <div><span>The problem</span><p>Turning visual circuit evidence into useful next steps without claiming unverified measurements.</p></div>
+                <div><span>The idea</span><p>A diagnostic conversation that makes visible evidence, uncertainty, and recommended checks explicit.</p></div>
+                <div><span>The technology</span><p>React, TypeScript, Vite, AI-assisted visual analysis, and a structured diagnostic workspace.</p></div>
+                <div><span>My contribution</span><p>Idea &amp; Concept — originating the core idea and contributing to the project vision and direction.</p></div>
               </div>
-              <div className="hero__ctas"><PortfolioButton tone="outline" onClick={() => setNotice("Add a real project URL to make this action available.")}>View project</PortfolioButton><PortfolioButton tone="outline" onClick={() => setNotice("Add a real GitHub URL to make this action available.")}><Github size={16} /> GitHub</PortfolioButton></div>
+              <div className="hero__ctas"><a className="portfolio-button portfolio-button--outline" href="https://circuitai-ezw8hzmd.manus.space" target="_blank" rel="noreferrer"><span>Live workspace</span><ArrowUpRight size={16} /></a><a className="portfolio-button portfolio-button--outline" href="https://github.com/sankarprasath-S/CircuitSight-AI" target="_blank" rel="noreferrer"><span>GitHub</span><Github size={16} /></a></div>
             </div>
           </Reveal>
         </section>

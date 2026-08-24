@@ -74,32 +74,48 @@ export function SkillItem({ name, detail }: { name: string; detail: string }) {
   );
 }
 
+export type PortfolioProject = {
+  title: string;
+  category: string;
+  description: string;
+  technologies: string;
+  problem: string;
+  approach: string;
+  github: string;
+  demo?: string;
+};
+
 export function ProjectCard({
   number,
-  category,
   layout,
+  project,
 }: {
   number: string;
-  category: string;
   layout: "large" | "small" | "wide" | "offset";
+  project: PortfolioProject;
 }) {
   return (
     <article className={`project-card project-card--${layout}`}>
-      <div className="project-card__image" aria-label={`Editable placeholder for project ${number} image`}>
-        <span>PROJECT IMAGE / TO BE ADDED</span>
+      <div className="project-card__image" aria-label={`Editorial project marker for ${project.title}`}>
+        <span>VERIFIED GITHUB PROJECT</span>
         <div className="project-card__image-grid" aria-hidden="true" />
       </div>
       <div className="project-card__topline">
         <span>PROJECT {number}</span>
-        <span>{category}</span>
+        <span>{project.category}</span>
       </div>
-      <h3>Coming Soon<span>.</span></h3>
-      <p>
-        An editable space for a future project. Add the challenge, solution, technology, features, and impact when the work is ready to share.
-      </p>
+      <h3>{project.title}<span>.</span></h3>
+      <p>{project.description}</p>
+      <div className="project-card__details">
+        <div><span>Problem</span><p>{project.problem}</p></div>
+        <div><span>Approach</span><p>{project.approach}</p></div>
+      </div>
       <div className="project-card__meta">
-        <span>TECHNOLOGY / TO BE ADDED</span>
-        <span>DETAILS / TO BE ADDED</span>
+        <span>TECH / {project.technologies}</span>
+      </div>
+      <div className="project-card__actions">
+        <a href={project.github} target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+        {project.demo ? <a href={project.demo} target="_blank" rel="noreferrer">Live workspace <ArrowUpRight size={15} /></a> : null}
       </div>
     </article>
   );
