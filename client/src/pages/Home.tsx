@@ -3,7 +3,7 @@
  * paper, precise charcoal rules, and sparse Signal Gold highlights.
  */
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Check, Download, ExternalLink, Github, Linkedin, Mail, Quote } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ExternalLink, Github, Linkedin, Mail, Quote } from "lucide-react";
 import { useEffect, useMemo, useState, type ChangeEvent, type FormEvent } from "react";
 import { PortfolioNavigation } from "@/components/PortfolioNavigation";
 import { ContactInput, Footer, PortfolioButton, ProjectCard, SectionHeader, SkillItem, TimelineItem } from "@/components/PortfolioPrimitives";
@@ -148,7 +148,6 @@ export default function Home() {
               <p className="typing-role" aria-live="polite"><span>Currently / </span>{roleWords[roleIndex]}</p>
               <div className="hero__ctas">
                 <PortfolioButton onClick={() => scrollTo("projects")}>View projects</PortfolioButton>
-                <PortfolioButton tone="outline" onClick={useResume}><Download size={16} aria-hidden="true" /> Download resume</PortfolioButton>
                 <PortfolioButton tone="outline" onClick={() => scrollTo("contact")}>Contact me</PortfolioButton>
               </div>
             </Reveal>
@@ -279,7 +278,7 @@ export default function Home() {
         </section>
 
         <section className="resume-section" id="resume">
-          <Reveal className="resume-section__content"><p className="eyebrow"><span>—</span> Professional folio</p><h2>Curious to<br />know <em>more?</em></h2><p>Explore my academic journey, technical interests, skills, and experience.</p><div className="hero__ctas"><PortfolioButton tone="gold" onClick={useResume}>View resume</PortfolioButton><PortfolioButton tone="outline" onClick={useResume}><Download size={16} /> Download resume</PortfolioButton></div></Reveal>
+          <Reveal className="resume-section__content"><p className="eyebrow"><span>—</span> Professional folio</p><h2>Curious to<br />know <em>more?</em></h2><p>Explore my academic journey, technical interests, skills, and experience.</p><div className="hero__ctas"><PortfolioButton tone="gold" onClick={useResume}>View resume</PortfolioButton></div></Reveal>
         </section>
 
         <section className="section contact" id="contact">
