@@ -264,6 +264,14 @@ export default function Home() {
             <div className="education__line" aria-hidden="true"><span /></div>
             <div className="education__content"><p className="eyebrow">Currently pursuing</p><h3>SNS College<br />of Technology</h3><p>Bachelor of Engineering — Electrical and Electronics Engineering</p></div>
           </Reveal>
+          <Reveal className="education__history">
+            <p className="eyebrow"><span>Previous studies</span> / P.A.C.M Higher Secondary School</p>
+            <div>
+              <article><p>2024 — 2025</p><h3>HSC 2nd Year</h3><span>P.A.C.M Higher Secondary School</span></article>
+              <article><p>2023 — 2024</p><h3>HSC 1st Year</h3><span>P.A.C.M Higher Secondary School</span></article>
+              <article><p>2022 — 2023</p><h3>SSLC</h3><span>P.A.C.M Higher Secondary School</span></article>
+            </div>
+          </Reveal>
         </section>
 
         <section className="technology-wall" id="technology">
