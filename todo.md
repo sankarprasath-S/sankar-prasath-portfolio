@@ -2,7 +2,7 @@
 
 - [x] Generate or source distinct visual treatments for CircuitSight AI and AeroCompliance.
 - [x] Replace the project-card grid placeholders with the prepared visuals.
-- [ ] Verify and publish the project imagery update.
+- [x] Verify and publish the project imagery update.
 
 > Verification note: CircuitSight AI and AeroCompliance now reference separate generated visual assets; the live preview remains functional after the card update.
 - [x] Identify why the live GitHub Pages homepage still reaches the fallback route.
